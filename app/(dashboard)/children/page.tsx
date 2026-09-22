@@ -1,14 +1,14 @@
 import Link from "next/link";
 import { Plus } from "lucide-react";
 import { getChildrenByParent } from "@/lib/actions/children";
-import { getCurrentProfile } from "@/lib/supabase/profile";
+import { requireRole } from "@/lib/supabase/profile";
 import { getChildAvatarSignedUrl } from "@/lib/supabase/avatar-server";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ChildCard } from "@/components/dashboard/ChildCard";
 
 export default async function ChildrenPage() {
-  const profile = await getCurrentProfile();
+  const profile = await requireRole(["parent"]);
   const children = await getChildrenByParent();
 
   const cards = await Promise.all(

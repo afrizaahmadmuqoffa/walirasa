@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
-import { Trash2 } from "lucide-react";
+import Link from "next/link";
+import { Shield, Trash2 } from "lucide-react";
 import { getChild } from "@/lib/actions/children";
+import { requireRole } from "@/lib/supabase/profile";
 import { getChildAvatarSignedUrl } from "@/lib/supabase/avatar-server";
 import { Button } from "@/components/ui/button";
 import {
@@ -23,6 +25,7 @@ type Props = {
 
 export default async function ChildDetailPage({ params }: Props) {
   const { childId } = await params;
+  await requireRole(["parent"]);
   const child = await getChild(childId);
 
   if (!child) {
@@ -44,7 +47,14 @@ export default async function ChildDetailPage({ params }: Props) {
             {child.nickname ? `"${child.nickname}" · ` : ""}Edit data dan foto anak.
           </p>
         </div>
-        <AlertDialog>
+        <div className="flex items-center gap-2">
+          <Button asChild variant="outline" type="button">
+            <Link href={`/children/${child.id}/access`}>
+              <Shield className="size-4" aria-hidden />
+              Kelola Akses
+            </Link>
+          </Button>
+          <AlertDialog>
           <AlertDialogTrigger asChild>
             <Button variant="destructive" type="button">
               <Trash2 className="size-4" aria-hidden />
@@ -67,6 +77,7 @@ export default async function ChildDetailPage({ params }: Props) {
             </AlertDialogFooter>
           </AlertDialogContent>
         </AlertDialog>
+        </div>
       </div>
 
       <ChildForm

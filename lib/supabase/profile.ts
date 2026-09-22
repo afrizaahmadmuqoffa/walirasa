@@ -37,3 +37,18 @@ export async function getCurrentProfile(): Promise<CurrentProfile> {
     role: profile.role,
   };
 }
+
+export type GuardOptions = {
+  redirectTo?: string;
+};
+
+export async function requireRole(
+  allowedRoles: UserRole[],
+  options: GuardOptions = {}
+): Promise<CurrentProfile> {
+  const profile = await getCurrentProfile();
+  if (!allowedRoles.includes(profile.role)) {
+    redirect(options.redirectTo ?? "/login");
+  }
+  return profile;
+}

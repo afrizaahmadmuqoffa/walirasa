@@ -856,7 +856,9 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      accept_invite: { Args: { p_token: string }; Returns: Json }
       can_access_child: { Args: { p_child_id: string }; Returns: boolean }
+      get_invite_details: { Args: { p_token: string }; Returns: Json }
       has_active_child_access: {
         Args: { p_child_id: string }
         Returns: boolean

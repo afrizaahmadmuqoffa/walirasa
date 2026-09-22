@@ -21,6 +21,6 @@ export function getNavItemsByRole(role: UserRole): NavItem[] {
     return items;
   }
 
-  // Fase 3: teacher/therapist menambahkan "Anak yang Saya Bantu".
+  items.push({ label: "Anak yang Saya Bantu", href: "/my-children" });
   return items;
 }
