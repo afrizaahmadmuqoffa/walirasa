@@ -19,7 +19,7 @@ criteria dan Definition of Done, ubah statusnya jadi ✅ dan isi tanggal.
 | 1    | Autentikasi & Role Dasar                          | ✅ Selesai    | 2026-09-22          |
 | 2    | Manajemen Profil Anak                             | ✅ Selesai    | 2026-09-22          |
 | 3    | Trust Vault — Akses Guru/Terapis                  | ✅ Selesai    | 2026-09-22          |
-| 4    | Modul AAC Communication Board                     | ⬜ Belum Mulai | -                |
+| 4    | Modul AAC Communication Board                     | ✅ Selesai    | 2026-09-22          |
 | 5    | Modul Emotion Mirror                              | ⬜ Belum Mulai | -                |
 | 6    | Modul Social Story Simulator                      | ⬜ Belum Mulai | -                |
 | 7    | Modul Adaptive Life Skills                        | ⬜ Belum Mulai | -                |
