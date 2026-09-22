@@ -18,7 +18,7 @@ criteria dan Definition of Done, ubah statusnya jadi ✅ dan isi tanggal.
 | 0    | Setup Fondasi Proyek & Pipeline Deploy            | ✅ Selesai    | 2026-09-22          |
 | 1    | Autentikasi & Role Dasar                          | ✅ Selesai    | 2026-09-22          |
 | 2    | Manajemen Profil Anak                             | ✅ Selesai    | 2026-09-22          |
-| 3    | Trust Vault — Akses Guru/Terapis                  | ⬜ Belum Mulai | -                |
+| 3    | Trust Vault — Akses Guru/Terapis                  | ✅ Selesai    | 2026-09-22          |
 | 4    | Modul AAC Communication Board                     | ⬜ Belum Mulai | -                |
 | 5    | Modul Emotion Mirror                              | ⬜ Belum Mulai | -                |
 | 6    | Modul Social Story Simulator                      | ⬜ Belum Mulai | -                |
