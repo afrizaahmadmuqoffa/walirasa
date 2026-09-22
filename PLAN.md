@@ -16,7 +16,7 @@ criteria dan Definition of Done, ubah statusnya jadi ✅ dan isi tanggal.
 | Fase | Nama                                            | Status         | Tanggal Selesai |
 |------|--------------------------------------------------|----------------|------------------|
 | 0    | Setup Fondasi Proyek & Pipeline Deploy            | ✅ Selesai    | 2026-09-22          |
-| 1    | Autentikasi & Role Dasar                          | ⬜ Belum Mulai | -                |
+| 1    | Autentikasi & Role Dasar                          | ✅ Selesai    | 2026-09-22          |
 | 2    | Manajemen Profil Anak                             | ⬜ Belum Mulai | -                |
 | 3    | Trust Vault — Akses Guru/Terapis                  | ⬜ Belum Mulai | -                |
 | 4    | Modul AAC Communication Board                     | ⬜ Belum Mulai | -                |
