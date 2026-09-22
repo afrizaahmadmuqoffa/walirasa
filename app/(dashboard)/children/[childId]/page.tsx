@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { Shield, Trash2 } from "lucide-react";
+import { LayoutGrid, PencilRuler, Shield, Trash2 } from "lucide-react";
 import { getChild } from "@/lib/actions/children";
 import { requireRole } from "@/lib/supabase/profile";
 import { getChildAvatarSignedUrl } from "@/lib/supabase/avatar-server";
@@ -48,6 +48,18 @@ export default async function ChildDetailPage({ params }: Props) {
           </p>
         </div>
         <div className="flex items-center gap-2">
+          <Button asChild variant="outline" type="button">
+            <Link href={`/play/${child.id}/aac`}>
+              <LayoutGrid className="size-4" aria-hidden />
+              Buka Board AAC
+            </Link>
+          </Button>
+          <Button asChild variant="outline" type="button">
+            <Link href={`/children/${child.id}/aac-editor`}>
+              <PencilRuler className="size-4" aria-hidden />
+              Editor AAC
+            </Link>
+          </Button>
           <Button asChild variant="outline" type="button">
             <Link href={`/children/${child.id}/access`}>
               <Shield className="size-4" aria-hidden />
