@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { PasswordInput } from "@/components/auth/PasswordInput";
 
 export function LoginForm() {
   const router = useRouter();
@@ -64,17 +65,14 @@ export function LoginForm() {
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
-          <div className="flex flex-col gap-1.5">
-            <Label htmlFor="password">Kata sandi</Label>
-            <Input
-              id="password"
-              type="password"
-              autoComplete="current-password"
-              required
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
+          <PasswordInput
+            id="password"
+            label="Kata sandi"
+            autoComplete="current-password"
+            required
+            value={password}
+            onChange={setPassword}
+          />
           {error ? (
             <p role="alert" className="text-sm text-destructive">
               {error}

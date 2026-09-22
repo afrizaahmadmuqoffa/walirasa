@@ -17,6 +17,7 @@ export function getNavItemsByRole(role: UserRole): NavItem[] {
   const items: NavItem[] = [{ label: "Dashboard", href: "/dashboard" }];
 
   if (role === "parent") {
+    items.push({ label: "Profil Anak", href: "/children" });
     return items;
   }
 
